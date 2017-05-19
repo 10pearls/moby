@@ -4,6 +4,8 @@ import (
 	"math/rand"
 	"sync"
 	"testing"
+	"io"
+	"github.com/stretchr/testify/require"
 )
 
 // for go test -v -race
@@ -20,3 +22,12 @@ func TestConcurrency(t *testing.T) {
 	}
 	wg.Wait()
 }
+
+func TestReader_Read(t *testing.T) {
+	var Reader io.Reader = &reader{rnd: Rand}
+	var s []byte = make([]byte, 5, 5)
+	_,err := Reader.Read(s)
+
+	require.Nil(t,err)
+}
+
