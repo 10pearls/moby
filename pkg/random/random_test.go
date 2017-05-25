@@ -26,8 +26,9 @@ func TestConcurrency(t *testing.T) {
 func TestReader_Read(t *testing.T) {
 	var Reader io.Reader = &reader{rnd: Rand}
 	var s []byte = make([]byte, 5, 5)
-	_,err := Reader.Read(s)
+	n,err := Reader.Read(s)
 
+	require.Equal(t,n,5)
 	require.Nil(t,err)
 }
 
