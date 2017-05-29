@@ -131,7 +131,7 @@ func TestComputeV2MetadataHMAC(t *testing.T) {
 
 	actual := ComputeV2MetadataHMAC([]byte("key"), &meta)
 
-	require.NotEmpty(t,actual)
-	require.EqualValues(t,expected,actual)
+	require.NotEmpty(t, actual)
+	require.EqualValues(t, expected, actual)
 
 }
