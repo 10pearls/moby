@@ -1,6 +1,8 @@
 package metadata
 
 import (
+	"crypto/hmac"
+	"crypto/sha256"
 	"encoding/hex"
 	"io/ioutil"
 	"math/rand"
@@ -10,9 +12,6 @@ import (
 
 	"github.com/docker/docker/layer"
 	"github.com/opencontainers/go-digest"
-
-	"crypto/hmac"
-	"crypto/sha256"
 	"github.com/stretchr/testify/require"
 )
 

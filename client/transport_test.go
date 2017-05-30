@@ -2,10 +2,11 @@ package client
 
 import (
 	"crypto/tls"
-	"github.com/stretchr/testify/require"
 	"net/http"
 	"testing"
 	"time"
+
+	"github.com/stretchr/testify/require"
 )
 
 func TestResolveTLSConfig(t *testing.T) {

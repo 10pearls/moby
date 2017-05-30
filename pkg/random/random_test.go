@@ -1,11 +1,12 @@
 package random
 
 import (
-	"github.com/stretchr/testify/require"
 	"io"
 	"math/rand"
 	"sync"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 // for go test -v -race
